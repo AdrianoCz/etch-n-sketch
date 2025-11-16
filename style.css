@@ -4,19 +4,49 @@
 }
 body{
     min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+input{
+    border: 1px solid rgba(255, 255, 255, 0.308);
+    background-color: rgba(255, 255, 255, 0.199);
+    padding: 1.6vh 5px;
+    border-radius: 2px;
+    color: white;
+    transition: all 200ms ease-in-out;
+}
+input::placeholder{
+    color: rgb(204, 204, 204);
+}
+input:focus{
+    outline: 0;
+    border: 1px solid white;
+}
+button{
+    color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.199);
+    padding: 1vh 15px;
+    transition: all 200ms ease-in-out;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.425); ;
 }
 nav{
+    background-color: rgb(35, 2, 66);
+    backdrop-filter: blur(100   px);
     height: 10vh;
-    border-bottom: 2px solid black;
     display: flex;
     padding: 0px 25px;
+    justify-content: center;
 }
 form{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    gap: 15px;
 }
+
 .line{
     width: fit-content;
     display: flex;
@@ -24,6 +54,28 @@ form{
 }
 .line:first-of-type{
     border-top: 2px solid black; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.line:first-of-type .block:first-of-type{
+    border-top-left-radius: 7px;
+}
+.line:first-of-type .block:last-of-type{
+    border-top-right-radius: 9px;
+}
+.line:last-of-type{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.line:last-of-type .block:first-of-type{
+    border-bottom-left-radius: 8px;
+}
+.line:last-of-type .block:last-of-type{
+    border-bottom-right-radius: 8px;
+}
+
+.appear{
+    animation: appear 1s ease-in-out
 }
 main{
     display: flex;
@@ -37,10 +89,18 @@ main{
     width: 50px;
     border-bottom: 2px solid black;
     transition: all 400ms ease-out;
+    background-color: white;
 }
 .selected-block{
     background-color: black;
 }
 .block:hover{
     background-color: black;
+}
+@keyframes appear {
+    from{
+        filter: blur(10px);
+    } to {
+        filter: blur(0px);
+    }
 }

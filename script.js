@@ -1,7 +1,8 @@
 const container = document.querySelector("#container")
-const btn = document.querySelector("button")
+const btn = document.querySelector("button")    
 const form = document.querySelector("form")
 function createGrid(e){
+    
     container.innerHTML = ""
     const input = document.querySelector("input") ;
 
@@ -24,7 +25,8 @@ function createGrid(e){
     document.querySelectorAll(".block").forEach(element => {
         element.addEventListener("click", () => {element.classList.toggle("selected-block")})
     });
-
+    container.classList.add("appear")
     e.preventDefault()
 }
 btn.addEventListener("click", createGrid)
+container.addEventListener("animationend", () => {container.classList.remove("appear")})
