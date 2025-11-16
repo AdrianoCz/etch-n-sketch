@@ -5,6 +5,9 @@
 body{
     min-height: 100vh;
     background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: small;
 }
 input{
     border: 1px solid rgba(255, 255, 255, 0.308);
@@ -36,9 +39,36 @@ nav{
     background-color: rgb(35, 2, 66);
     backdrop-filter: blur(100   px);
     height: 10vh;
-    display: flex;
     padding: 0px 25px;
+    display: flex;
+    align-items: center;
+}
+form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.gridInput{
+    display: flex;
+    gap: 10px;
+}
+
+.radio{
+    display: flex;
+    gap: 10px;
+    align-items: center;
     justify-content: center;
+}
+.radio div{
+    display: flex;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+}
+.gridInput{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 form{
     display: flex;
@@ -83,10 +113,12 @@ main{
     align-items: center;
     min-height: 90vh;  
 }
+#container{
+    min-width: 60vh;
+    min-height: 60vh;
+}
 .block {
     border-right: 2px solid black;
-    height: 50px;
-    width: 50px;
     border-bottom: 2px solid black;
     transition: all 400ms ease-out;
     background-color: white;

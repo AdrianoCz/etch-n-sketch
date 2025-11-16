@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch n sketch</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav>
-        <form onsubmit="return false">
-            <div>
-                <input type="text" placeholder="grid size (n x n)">
-            </div>
-            <div>    
-                <button>create</button>
-            </div>
-
-        </form>
+      <form onsubmit="return false">
+        <div class="gridInput">
+          <div>
+            <input type="text" placeholder="grid size (n x n)" />
+          </div>
+          <div>
+            <button>create</button>
+          </div>
+        </div>
+        <div class="radio">
+          <div>
+            <input type="radio" name="drawType" id="etch" checked="true"/>
+            <label for="etch"><span>etch a sketch</span></label>
+          </div>
+          <div>
+            <input type="radio" name="drawType" id="draw" />
+            <label for="draw"><span>draw</span></label>
+          </div>
+        </div>
+      </form>
     </nav>
     <main><div id="container"></div></main>
-<script src="script.js"></script>    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
