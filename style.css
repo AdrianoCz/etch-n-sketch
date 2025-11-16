@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+}
+nav{
+    height: 10vh;
+    border-bottom: 2px solid black;
+    display: flex;
+    padding: 0px 25px;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.line{
+    width: fit-content;
+    display: flex;
+    border-left: 2px solid black ;
+}
+.line:first-of-type{
+    border-top: 2px solid black; 
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;  
+}
+.block {
+    border-right: 2px solid black;
+    height: 50px;
+    width: 50px;
+    border-bottom: 2px solid black;
+    transition: all 400ms ease-out;
+}
+.selected-block{
+    background-color: black;
+}
+.block:hover{
+    background-color: black;
+}
